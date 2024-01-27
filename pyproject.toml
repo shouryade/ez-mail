@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "ez-mail"
+version = "0.1.0"
+description = ""
+authors = ["shouryade <shourya.de12@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+djangorestframework = "^3.14.0"
+markdown = "^3.5.2"
+django-filter = "^23.5"
+django-admin = "^2.0.2"
+django = "^5.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
