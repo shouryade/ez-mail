@@ -29,7 +29,7 @@ SECRET_KEY = "django-insecure-w+pvh-u2#49q77e$j9k3#b-sw%-a59_!2aud(3ga8k*mr@6)o4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -56,7 +56,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "ezmail.urls"
-
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",

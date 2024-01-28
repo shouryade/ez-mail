@@ -19,9 +19,12 @@ def create_user(request):
     """
     Create a new user
     """
-    username = request.data.get("username")
-    email = request.data.get("email")
-    phone = request.data.get("phone")
-    user = User.objects.create(username=username, email=email, phone=phone)
-    serializer = UserSerializer(user)
-    return Response({"user": serializer.data})
+    try:
+        username = request.data.get("username")
+        email = request.data.get("email")
+        phone = request.data.get("phone")
+        user = User.objects.create(username=username, email=email, phone=phone)
+        serializer = UserSerializer(user)
+        return Response({"user": serializer.data})
+    except Exception as e:
+        return Response({"error": str(e)}, status=400)
